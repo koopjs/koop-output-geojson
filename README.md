@@ -1,5 +1,7 @@
 # koop-output-geojson
 
+[![npm](https://img.shields.io/npm/v/koop-output-geojson.svg)](https://www.npmjs.com/package/koop-output-geojson)
+
 A simple [Koop output plugin](https://koopjs.github.io/docs/usage/output) that collects and filters GeoJSON from [providers](https://koopjs.github.io/docs/available-plugins/providers).
 
 ## Installation
