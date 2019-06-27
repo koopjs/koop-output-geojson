@@ -8,7 +8,8 @@
         "coordinates": [0, 0]
       },
       "properties": {
-        "id": "1"
+        "id": "1",
+        "count": 1
       }
     }
   ]

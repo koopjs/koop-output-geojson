@@ -18,13 +18,13 @@
   "homepage": "https://github.com/haoliangyu/koop-output-geojson#readme",
   "devDependencies": {
     "@koopjs/provider-file-geojson": "^1.0.1",
-    "husky": "^2.4.1",
+    "husky": "^2.7.0",
     "koop": "^3.12.2",
     "prettier": "^1.18.2",
-    "pretty-quick": "^1.11.0"
+    "pretty-quick": "^1.11.1"
   },
   "dependencies": {
-    "winnow": "^1.16.7"
+    "winnow": "^1.16.8"
   },
   "husky": {
     "hooks": {
