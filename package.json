@@ -4,7 +4,7 @@
   "description": "A simple Koop output plugin that returns GeoJSON from providers",
   "main": "src/index.js",
   "scripts": {
-    "start": "node test/server"
+    "start": "koop serve --data test/data.geojson"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/haoliangyu/koop-output-geojson#readme",
   "devDependencies": {
-    "@koopjs/provider-file-geojson": "^1.0.1",
+    "@koopjs/cli": "^0.5.0",
     "husky": "^2.7.0",
     "koop": "^3.12.2",
     "prettier": "^1.18.2",
