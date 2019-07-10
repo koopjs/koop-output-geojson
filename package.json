@@ -18,17 +18,25 @@
   "homepage": "https://github.com/haoliangyu/koop-output-geojson#readme",
   "devDependencies": {
     "@koopjs/cli": "^0.5.0",
-    "husky": "^2.7.0",
-    "koop": "^3.12.2",
+    "husky": "^3.0.0",
+    "koop": "^3.13.0",
     "prettier": "^1.18.2",
     "pretty-quick": "^1.11.1"
   },
   "dependencies": {
+    "topojson": "^3.0.2",
     "winnow": "^1.16.8"
   },
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
-  }
+  },
+  "keywords": [
+    "koopjs",
+    "plugin",
+    "output",
+    "geojson",
+    "topojson"
+  ]
 }

@@ -1,38 +1,28 @@
-const winnow = require("winnow");
 const packageInfo = require("../package.json");
+const serveGeoJSON = require("./serve-geojson");
+const serveTopoJSON = require("./serve-topojson");
 
-function Output() {}
+function GeoJSON() {}
 
-Output.prototype.serve = function handleRequest(req, res) {
-  this.model.pull(req, (error, geojson) => {
-    if (error) {
-      return res.status(error.code || 500).json({ message: error.message });
-    }
+GeoJSON.prototype.serveGeoJSON = serveGeoJSON;
 
-    // send data to winnow; filter the data according to query
-    const query = req.method === "POST" ? req.body : req.query;
-    const options = Object.assign({ toEsri: false }, query);
-    let result;
+GeoJSON.prototype.serveTopoJSON = serveTopoJSON;
 
-    try {
-      result = winnow.query(geojson, options);
-      res.status(200).json(result);
-    } catch (error) {
-      res.status(error.code || 500).json({ message: error.message });
-    }
-  });
-};
+GeoJSON.version = packageInfo.version;
 
-Output.version = packageInfo.version;
+GeoJSON.type = "output";
 
-Output.type = "output";
-
-Output.routes = [
+GeoJSON.routes = [
   {
     path: "geojson",
     methods: ["get", "post"],
-    handler: "serve"
+    handler: "serveGeoJSON"
+  },
+  {
+    path: "topojson",
+    methods: ["get", "post"],
+    handler: "serveTopoJSON"
   }
 ];
 
-module.exports = Output;
+module.exports = GeoJSON;
