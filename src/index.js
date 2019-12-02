@@ -14,12 +14,12 @@ GeoJSON.type = "output";
 
 GeoJSON.routes = [
   {
-    path: "geojson",
+    path: "$namespace/$providerParams/geojson",
     methods: ["get", "post"],
     handler: "serveGeoJSON"
   },
   {
-    path: "topojson",
+    path: "$namespace/$providerParams/topojson",
     methods: ["get", "post"],
     handler: "serveTopoJSON"
   }
